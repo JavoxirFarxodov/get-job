@@ -1,0 +1,64 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Category</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}"/>
+    <style>
+      #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 58px;
+      }
+      @media (max-width: 991px) {
+        #intro {
+          /* Margin to fix overlapping fixed navbar */
+          margin-top: 45px;
+        }
+      }
+    </style>
+</head>
+<body>
+      <!--Main Navigation-->
+  <header>
+  <!--Main layout-->
+  <main class="my-5">
+    <div class="container">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-md-9 mb-4">
+          <!--Section: Content-->
+          {% for job in data %}
+          <section>
+            <!-- Post -->
+                    <div class="row">
+                      <div class="col-md-4 mb-4">
+                        <div class="bg-image hover-overlay shadow-1-strong rounded ripple" data-mdb-ripple-color="light">
+                          <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
+                          <a href="#">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                          </a>
+                        </div>
+                      </div>
+
+              <div class="col-md-8 mb-4">
+                <h5>{{ job.title }}</h5>
+                <p>{{ job.description | truncatechars:100 }}</p>
+
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </section>
+          {% endfor %}
+          <!--Section: Content-->
+        </div>
+    </div>
+</body>
+</html>

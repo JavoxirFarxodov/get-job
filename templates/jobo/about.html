@@ -1,0 +1,47 @@
+{% load static %}
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title> An About Us Page</title>
+  <!---Custom Css File!--->
+  <link rel="stylesheet" href="{% static 'CSS/about.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <section class="about-us">
+
+    <div class="about">
+      <img  src="{% static 'imag/about.jpg' %}" class="pic">
+      <div class="text">
+        <h2>About Us</h2>
+        <h5>Get Job & <span>Jobo</span></h5>
+          <p> Tashabbuslarga toʻlib-toshgan, ishning koʻzini biladigan va yangi gʻoyalar bilan atrofdagilarni ham ilhomlantirib turadigan professional xodimlar har qanday kompaniya rivojida muhim oʻrin tutadi. Ammo, ularni izlab topish va ishga jalb qilish yaxshigina vaqtingizni olib qoʻyadi.
+.</p>
+        <div class="data">
+<!--        <a href="#" class="hire">Hire Me</a>-->
+        </div>
+      </div>
+    </div>
+  </section>
+<main>
+        <section class="about-section">
+            <h1>About Us</h1>
+            <p>Welcome to GetJob, your go-to platform for finding your dream job. We're dedicated to connecting job seekers with the right opportunities and helping employers find the best talent.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 GetJob. All rights reserved.</p>
+    </footer>
+</body>
+</html>
